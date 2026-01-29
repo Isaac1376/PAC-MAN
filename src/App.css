@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: radial-gradient(circle, #000, #111);
+  color: white;
+}
+
+.game-container {
+  padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  width: 92vw;
+  max-width: 520px;
+  aspect-ratio: 1 / 1;
+  margin: auto;
+  gap: 2px;
+}
+
+.cell {
+  background: black;
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.wall {
+  background: blue;
+}
+
+.pacman,
+.ghost {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.food {
+  width: 7px;
+  height: 7px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.power-food {
+  width: 14px;
+  height: 14px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+
+.vulnerable {
+  filter: grayscale(100%);
+}
+
+.controls {
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+}
+
+.controls div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.controls button {
+  font-size: 26px;
+  padding: 14px 18px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+}
